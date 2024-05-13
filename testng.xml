@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/WebAutomation/E-BazarTest/src/test/java/TestCases">
+        <classes>
+            <class name="TestCases.TestLogin">
+                <methods>
+                    <exclude name="Testlogin"/>
+                    <exclude name="TestSignUpWithValid_Credentials"/>
+                    <exclude name="TestSignUpWithInValid_Credentials"/>
+                    <include name="TestloginwithInValidCredentials"/>
+
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
