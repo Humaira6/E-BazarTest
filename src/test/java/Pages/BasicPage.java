@@ -1,18 +1,18 @@
 package Pages;
 
+import Utilities.webdriverSetup;
+import io.qameta.allure.Allure;
 import junit.framework.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.ByteArrayInputStream;
 import java.time.Duration;
 
 import static Utilities.webdriverSetup.getBrowser;
 
-public class BasicPage {
+public class BasicPage extends webdriverSetup {
 
 
     public WebElement getElement(By locator) {
@@ -44,6 +44,18 @@ public class BasicPage {
             return false;
         }
 
+    }
+
+    public Boolean isdisplay(By locator){
+        try {
+            return getElement(locator).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public void addScreenshot(String name){
+        Allure.addAttachment(name,new ByteArrayInputStream(((TakesScreenshot)getBrowser()).getScreenshotAs(OutputType.BYTES)));
     }
 
 

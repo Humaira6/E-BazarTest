@@ -3,12 +3,12 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="E:/WebAutomation/E-BazarTest/src/test/java/TestCases">
         <classes>
-            <class name="TestCases.TestLogin">
+            <class name="TestCases.TestSignUp">
                 <methods>
                     <exclude name="Testlogin"/>
                     <exclude name="TestSignUpWithValid_Credentials"/>
-                    <exclude name="TestSignUpWithInValid_Credentials"/>
-                    <include name="TestloginwithInValidCredentials"/>
+                    <include name="TestSignUpWithInValid_Credentials"/>
+                    <exclude name="TestloginwithInValidCredentials"/>
 
 
                 </methods>
